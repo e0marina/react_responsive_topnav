@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Toolbar from "./components/Toolbar/Toolbar";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
-import BackDrop from "./components/Backdrop/Backdrop";
 
 class App extends Component {
   state = {
@@ -14,20 +13,24 @@ class App extends Component {
     });
   };
 
-  backdropClickHandler = () => {
+  xClickHandler = () => {
     this.setState({ sideDrawerOpen: false });
   };
 
   render() {
-    let backDrop;
+    let x;
     if (this.state.sideDrawerOpen) {
-      backDrop = <BackDrop click={this.backdropClickHandler} />;
+      x = <x click={this.xClickHandler} />;
     }
+
     return (
       <div style={{ height: "100%" }}>
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer show={this.state.sideDrawerOpen} />
-        {backDrop}
+        <SideDrawer
+          show={this.state.sideDrawerOpen}
+          click={this.xClickHandler}
+        />
+
         <main style={{ marginTop: "64px" }}>
           <p>This is the page content</p>
         </main>

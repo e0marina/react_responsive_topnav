@@ -2,7 +2,6 @@ import React from "react";
 import "../SideDrawer/DrawerToggleButton";
 import "./Toolbar.css";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
-import { Dropdown } from "react-bootstrap";
 
 const toolbar = (props) => (
   <header className="toolbar">
@@ -22,25 +21,6 @@ const toolbar = (props) => (
           </li>
           <li>
             <a href="/">Users</a>
-          </li>
-          <li>
-            <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Dropdown Button
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1" style={{ color: "#0a0404" }}>
-                  Action
-                </Dropdown.Item>
-                <Dropdown.Item href="#/action-2" style={{ color: "#0a0404" }}>
-                  Another action
-                </Dropdown.Item>
-                <Dropdown.Item href="#/action-3" style={{ color: "#0a0404" }}>
-                  Something else
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
           </li>
         </ul>
       </div>
